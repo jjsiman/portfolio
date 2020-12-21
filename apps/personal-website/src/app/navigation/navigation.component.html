@@ -1,0 +1,18 @@
+<div class="h-100 d-flex flex-column" [ngClass]="{ 'justify-content-between': !collapsible }">
+  <div class="menu-group" *ngIf="!collapsible">
+    <div class="menu-item">
+      <portfolio-logo></portfolio-logo>
+    </div>
+  </div>
+  <nav class="menu-group">
+    <portfolio-navigation-link *ngFor="let link of navLinks" class="menu-item menu-item--link"
+      [ngClass]="{ 'menu-item--large': collapsible }" [route]="link.route" [icon]="link.icon" [label]="link.label">
+    </portfolio-navigation-link>
+  </nav>
+  <div class="menu-group">
+    <a mat-icon-button class="menu-item" href="https://github.com/jjsiman/portfolio" target="_blank"
+      aria-label="View Github repo in new tab">
+      <mat-icon svgIcon="github" aria-hidden="false"></mat-icon>
+    </a>
+  </div>
+</div>

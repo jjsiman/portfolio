@@ -9,7 +9,7 @@ describe('personal-website', () => {
   });
 
   it('should have a link to take you home', () => {
-    const button = cy.get('a');
+    const button = cy.get('.home-button');
     button.click();
     cy.url().should('include', '/home');
   });

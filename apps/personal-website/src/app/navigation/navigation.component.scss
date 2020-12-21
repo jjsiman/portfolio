@@ -1,0 +1,13 @@
+@import '~@angular/material/theming';
+
+.menu-item {
+  height: 60px;
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &--large {
+    width: 100vw;
+  }
+}
