@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+
+.home-button {
+  text-decoration: none;
+}
+
+.page-404-container {
+  background-color: rgb(232, 232, 240);
+}
+
+.polaroid {
+  display: inline-block;
+  width: auto;
+  padding: 20px;
+  margin: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+
+  transform: rotate(-3deg);
+
+  font-family: 'Amatic SC', cursive;
+  font-size: 1.5rem;
+}
+
+.lost-image {
+  border-radius: 2px;
+
+  max-width: 300px;
+  margin-bottom: 20px;
+}
