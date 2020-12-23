@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, HostBinding, OnInit, ViewChild } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { SubSink } from 'subsink';
 import { MatSidenav } from '@angular/material/sidenav';
@@ -17,6 +17,8 @@ export class AppComponent implements OnInit {
 
   @ViewChild('sidenav', { read: MatSidenav }) sidenav: MatSidenav;
 
+  @HostBinding('class') class = 'mat-typography';
+
   constructor(
     private router: Router,
     private breakpointObserver: BreakpointObserver
@@ -26,7 +28,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     // detect mobile breakpoint
     this.subsink.sink = this.breakpointObserver.observe([
-      Breakpoints.Handset
+      '(max-width: 740px)',
     ]).subscribe(res => {
       this.isMobile = res.matches;
     });
