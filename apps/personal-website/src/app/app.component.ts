@@ -44,6 +44,4 @@ export class AppComponent implements OnInit {
   ngOnDestroy(): void {
     this.subsink.unsubscribe();
   }
-
-  title = 'personal-website';
 }

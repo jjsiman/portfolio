@@ -1,22 +1,20 @@
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HomeComponent } from './home.component';
+import { FullScreenWrapperComponent } from './full-screen-wrapper.component';
 
-describe('HomeComponent', () => {
-  let component: HomeComponent;
-  let fixture: ComponentFixture<HomeComponent>;
+describe('FullScreenWrapperComponent', () => {
+  let component: FullScreenWrapperComponent;
+  let fixture: ComponentFixture<FullScreenWrapperComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HomeComponent ],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+      declarations: [ FullScreenWrapperComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HomeComponent);
+    fixture = TestBed.createComponent(FullScreenWrapperComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
