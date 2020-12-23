@@ -1,0 +1,10 @@
+@mixin app-theme($theme) {
+  $config: mat-get-color-config($theme);
+  $foreground: map-get($config, foreground);
+  $background: map-get($config, background);
+  
+  .mobile-toolbar {
+    background-color: map-get($background, background);
+    border-bottom: 1px solid map-get($foreground, divider);
+  }
+}

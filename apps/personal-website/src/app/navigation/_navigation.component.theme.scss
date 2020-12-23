@@ -1,0 +1,12 @@
+@mixin navigation-theme($theme) {
+  $config: mat-get-color-config($theme);
+  $foreground: map-get($config, foreground);
+  
+  .menu-item--link {
+    border-bottom: 1px solid map-get($foreground, divider);
+
+    &:first-of-type {
+      border-top: 1px solid map-get($foreground, divider);
+    }
+  }
+}
