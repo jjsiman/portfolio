@@ -1,1 +1,18 @@
-<router-outlet></router-outlet>
+<mat-toolbar *ngIf="isMobile" role="heading" class="mobile-toolbar d-flex justify-content-between">
+  <button mat-icon-button (click)="sidenav.toggle()">
+    <mat-icon>{{ sidenav.opened ? 'close' : 'menu' }}</mat-icon>
+  </button>
+  <span>
+    <portfolio-logo></portfolio-logo>
+  </span>
+</mat-toolbar>
+
+<mat-sidenav-container class="app-container" [ngStyle]="{ 'margin-top': isMobile ? 56 : 0 }">
+  <mat-sidenav #sidenav role="region" [mode]="isMobile ? 'over' : 'side' " [opened]="!isMobile"
+    [fixedInViewport]="isMobile" fixedTopGap="56" [disableClose]="!isMobile">
+    <portfolio-navigation [collapsible]="isMobile" (closed)="sidenav.close()"></portfolio-navigation>
+  </mat-sidenav>
+  <mat-sidenav-content role="main">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
