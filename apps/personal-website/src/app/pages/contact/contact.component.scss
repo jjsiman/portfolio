@@ -1,0 +1,40 @@
+.submit-message {
+  font-size: 0.875rem;
+  margin: 0;
+  max-width: 200px;
+
+  &--success {
+    color: #4CAF50;
+  }
+
+  &--failure {
+    color: #f44336;
+  }
+}
+
+// LOADING ANIMATION FROM https://loading.io/css/
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  border-color: currentColor transparent currentColor transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
