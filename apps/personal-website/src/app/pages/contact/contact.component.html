@@ -1,44 +1,53 @@
-<form [formGroup]="formGroup" (ngSubmit)="sendEmail()" class="container-fluid">
-  <div class="row justify-content-center">
-    <div class="col-auto">
-      <div class="row">
-        <mat-form-field appearance="outline" class="col-auto">
-          <mat-label>Name</mat-label>
-          <input matInput type="text" formControlName="name">
-        </mat-form-field>
-        <mat-form-field appearance="outline" class="col-auto">
-          <mat-label>Email</mat-label>
-          <input matInput type="email" formControlName="email" required>
-          <mat-error *ngIf="formGroup.controls.email.invalid">Not a valid email</mat-error>
-        </mat-form-field>
-      </div>
-      <div class="row">
-        <mat-form-field appearance="outline" class="col w-100">
-          <mat-label>Message</mat-label>
-          <textarea matInput formControlName="message" required></textarea>
-        </mat-form-field>
-      </div>
-      <div class="row">
-        <div class="col-auto mb-2">
-          <button mat-stroked-button [disabled]="!formGroup.valid">Send</button>
+<portfolio-full-screen-wrapper>
+  <form [formGroup]="formGroup" (ngSubmit)="sendEmail()" class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-auto">
+        <div class="row">
+          <div class="col">
+            <h1>Contact Me</h1>
+            <p>Questions? Comments? Job opportunities? Fill out the form!</p>
+          </div>
         </div>
-        <div class="col-auto mb-2" *ngIf="submitted">
-          <div class="d-flex align-items-center h-100">
-            <ng-container *ngIf="submitResponse; else loading">
-              <p *ngIf="submitSuccess" class="submit-message submit-message--success">Email sent successfully!</p>
-              <p *ngIf="!submitSuccess" class="submit-message submit-message--failure">Unable to send email. Please try
-                again or <a href="https://github.com/jjsiman/portfolio/issues/new" target="_blank">submit an issue</a>
-                on
-                Github.
-              </p>
-            </ng-container>
-            <ng-template #loading>
-              <div class="lds-dual-ring mr-2"></div>
-              <p class="d-inline-block submit-message">Working on it...</p>
-            </ng-template>
+        <div class="row">
+          <mat-form-field appearance="outline" class="col-auto">
+            <mat-label>Name</mat-label>
+            <input matInput type="text" formControlName="name">
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="col-auto">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" formControlName="email" required>
+            <mat-error *ngIf="formGroup.controls.email.invalid">Not a valid email</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="row">
+          <mat-form-field appearance="outline" class="col w-100">
+            <mat-label>Message</mat-label>
+            <textarea matInput formControlName="message" required></textarea>
+          </mat-form-field>
+        </div>
+        <div class="row">
+          <div class="col-auto mb-2">
+            <button mat-stroked-button [disabled]="!formGroup.valid">Send</button>
+          </div>
+          <div class="col-auto mb-2" *ngIf="submitted">
+            <div class="d-flex align-items-center h-100">
+              <ng-container *ngIf="submitResponse; else loading">
+                <p *ngIf="submitSuccess" class="submit-message submit-message--success">Email sent successfully!</p>
+                <p *ngIf="!submitSuccess" class="submit-message submit-message--failure">Unable to send email. Please
+                  try
+                  again or <a href="https://github.com/jjsiman/portfolio/issues/new" target="_blank">submit an issue</a>
+                  on
+                  Github.
+                </p>
+              </ng-container>
+              <ng-template #loading>
+                <div class="lds-dual-ring mr-2"></div>
+                <p class="d-inline-block submit-message">Working on it...</p>
+              </ng-template>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</form>
+  </form>
+</portfolio-full-screen-wrapper>

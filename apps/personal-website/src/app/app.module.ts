@@ -13,6 +13,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NavigationLinkComponent } from './navigation/navigation-link/navigation-link.component';
 import { LogoComponent } from './logo/logo.component';
+import { FullScreenWrapperComponent } from './shared/components/full-screen-wrapper/full-screen-wrapper.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { LogoComponent } from './logo/logo.component';
     NavigationComponent,
     HomeComponent,
     NavigationLinkComponent,
-    LogoComponent
+    LogoComponent,
+    FullScreenWrapperComponent
   ],
   imports: [
     BrowserModule,
