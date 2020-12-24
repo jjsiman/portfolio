@@ -1,5 +1,5 @@
 import { Component, HostBinding, OnInit, ViewChild } from '@angular/core';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { BreakpointObserver } from '@angular/cdk/layout';
 import { SubSink } from 'subsink';
 import { MatSidenav } from '@angular/material/sidenav';
 import { NavigationEnd, Router } from '@angular/router';
@@ -39,6 +39,9 @@ export class AppComponent implements OnInit {
     ).subscribe(_ => {
       if (this.isMobile) {
         this.sidenav.close();
+      } else {
+        // for pages with a focus selector, 
+        setTimeout(() => (document.querySelector('#focus-me') as HTMLAnchorElement)?.focus(), 0);
       }
     });
   }

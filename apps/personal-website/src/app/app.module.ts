@@ -14,6 +14,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { NavigationLinkComponent } from './navigation/navigation-link/navigation-link.component';
 import { LogoComponent } from './logo/logo.component';
 import { FullScreenWrapperComponent } from './shared/components/full-screen-wrapper/full-screen-wrapper.component';
+import { FocusTrapComponent } from './shared/components/focus-trap/focus-trap.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FullScreenWrapperComponent } from './shared/components/full-screen-wrap
     HomeComponent,
     NavigationLinkComponent,
     LogoComponent,
-    FullScreenWrapperComponent
+    FullScreenWrapperComponent,
+    FocusTrapComponent
   ],
   imports: [
     BrowserModule,

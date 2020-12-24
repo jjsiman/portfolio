@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { EmailService } from '../../shared/services/email.service';
 import { SubSink } from 'subsink';
-import { catchError } from 'rxjs/operators'
+
 
 @Component({
   selector: 'portfolio-contact',
@@ -10,7 +10,7 @@ import { catchError } from 'rxjs/operators'
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-
+  
   formGroup = this.fb.group({
     'name': this.fb.control(''),
     'email': this.fb.control('', [Validators.required, Validators.email]),
