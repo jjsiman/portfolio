@@ -4,11 +4,11 @@
   max-width: 200px;
 
   &--success {
-    color: #4CAF50;
+    color: #4CAF50; // mat-green: 500
   }
 
   &--failure {
-    color: #f44336;
+    color: #f44336; // mat-red: 500
   }
 }
 
