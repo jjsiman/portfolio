@@ -2,7 +2,7 @@
 <portfolio-full-screen-wrapper>
   <form [formGroup]="formGroup" (ngSubmit)="sendEmail()" class="container-fluid">
     <div class="row justify-content-center">
-      <div class="col-auto">
+      <div class="col-auto mat-card p-5">
         <div class="row">
           <div class="col">
             <h1>Contact Me</h1>
@@ -28,7 +28,7 @@
         </div>
         <div class="row">
           <div class="col-auto mb-2">
-            <button mat-stroked-button [disabled]="!formGroup.valid">Send</button>
+            <button mat-flat-button [disabled]="!formGroup.valid">Send</button>
           </div>
           <div class="col-auto mb-2" *ngIf="submitted">
             <div class="d-flex align-items-center h-100">

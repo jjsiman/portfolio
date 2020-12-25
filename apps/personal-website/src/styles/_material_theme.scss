@@ -11,24 +11,37 @@
 // Be sure that you only ever include this mixin once!
 @include mat-core();
 
+// Making custom dark theme
+// modifying values as needed
+$personal-site-dark-theme-background: map-merge($mat-dark-theme-background, (
+  background: #121212,
+  card: rgba(255, 255, 255, 0.07)
+));
+
+// Override default material dark color config
+@function _personal-site-dark-color-config($primary, $accent, $warn: null) {
+  @return (
+    primary: $primary,
+    accent: $accent,
+    warn: if($warn != null, $warn, mat-palette($mat-red)),
+    is-dark: true,
+    foreground: $mat-dark-theme-foreground,
+    background: $personal-site-dark-theme-background,
+  );
+}
+
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$personal-website-primary: mat-palette($mat-indigo);
-$personal-website-accent: mat-palette($mat-pink, A200, A100, A400);
-
-// The warn palette is optional (defaults to red).
-$personal-website-warn: mat-palette($mat-red);
+$personal-website-primary: mat-palette($mat-light-blue);
+$personal-website-accent: mat-palette($mat-amber, A200, A100, A400);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$personal-website-theme: mat-light-theme((
-  color: (
-    primary: $personal-website-primary,
-    accent: $personal-website-accent,
-    warn: $personal-website-warn,
-  )
-));
+$personal-website-theme: _personal-site-dark-color-config(
+  $personal-website-primary,
+  $personal-website-accent
+);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
