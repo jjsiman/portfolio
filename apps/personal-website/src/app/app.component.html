@@ -7,9 +7,9 @@
   </span>
 </mat-toolbar>
 
-<mat-sidenav-container class="app-container" [ngStyle]="{ 'margin-top': isMobile ? 56 : 0 }">
+<mat-sidenav-container class="app-container" [ngStyle]="{ 'margin-top': isMobile ? 64 : 0 }">
   <mat-sidenav #sidenav role="region" [mode]="isMobile ? 'over' : 'side' " [opened]="!isMobile"
-    [fixedInViewport]="isMobile" fixedTopGap="56" [disableClose]="!isMobile">
+    [fixedInViewport]="isMobile" fixedTopGap="64" [disableClose]="!isMobile">
     <portfolio-navigation [collapsible]="isMobile" (closed)="sidenav.close()"></portfolio-navigation>
   </mat-sidenav>
   <mat-sidenav-content role="main">

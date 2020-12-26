@@ -3,7 +3,6 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { EmailService } from '../../shared/services/email.service';
 import { SubSink } from 'subsink';
 
-
 @Component({
   selector: 'portfolio-contact',
   templateUrl: './contact.component.html',
