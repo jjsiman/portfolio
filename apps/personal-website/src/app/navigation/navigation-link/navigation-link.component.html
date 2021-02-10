@@ -1,13 +1,14 @@
 <ng-container *ngIf="!parentNav.collapsible; else fullWidth">
-  <a mat-icon-button [routerLink]="[route]" routerLinkActive="active" [attr.aria-label]="label">
-    <mat-icon>{{ icon }}</mat-icon>
+  <a mat-icon-button [routerLink]="[route]" routerLinkActive #rla="routerLinkActive" [attr.aria-label]="label"
+    (mouseover)="isHovered = true" (mouseout)="isHovered = false">
+    <mat-icon [class.material-icons-outlined]="rla.isActive || isHovered">{{ icon }}</mat-icon>
   </a>
 </ng-container>
 
 <ng-template #fullWidth>
-  <a mat-button class="full-width" [routerLink]="[route]" routerLinkActive="active"
-    [attr.aria-label]="label">
-    <mat-icon>{{ icon }}</mat-icon>
+  <a mat-button class="full-width" [routerLink]="[route]" routerLinkActive #rla="routerLinkActive"
+    [attr.aria-label]="label" (mouseover)="isHovered = true" (mouseout)="isHovered = false">
+    <mat-icon [class.material-icons-outlined]="rla.isActive || isHovered">{{ icon }}</mat-icon>
     {{ label }}
   </a>
 </ng-template>

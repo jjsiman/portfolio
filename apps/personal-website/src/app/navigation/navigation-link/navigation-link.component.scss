@@ -8,6 +8,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  &:hover {
+    color: inherit;
+  }
 }
 
 .full-width {

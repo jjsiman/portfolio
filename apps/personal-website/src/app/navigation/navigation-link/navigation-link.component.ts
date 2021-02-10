@@ -12,6 +12,8 @@ export class NavigationLinkComponent implements OnInit {
   @Input() icon: string;
   @Input() label: string;
 
+  isHovered = false;
+
   constructor(
     public parentNav: NavigationComponent
   ) { }

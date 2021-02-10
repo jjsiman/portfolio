@@ -15,6 +15,7 @@ import { NavigationLinkComponent } from './navigation/navigation-link/navigation
 import { LogoComponent } from './logo/logo.component';
 import { FullScreenWrapperComponent } from './shared/components/full-screen-wrapper/full-screen-wrapper.component';
 import { FocusTrapComponent } from './shared/components/focus-trap/focus-trap.component';
+import { ConstructionComponent } from './shared/components/construction/construction.component';
 import { AboutComponent } from './pages/about/about.component';
 
 @NgModule({
@@ -28,6 +29,7 @@ import { AboutComponent } from './pages/about/about.component';
     LogoComponent,
     FullScreenWrapperComponent,
     FocusTrapComponent,
+    ConstructionComponent,
     AboutComponent
   ],
   imports: [
