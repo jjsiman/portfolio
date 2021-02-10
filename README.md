@@ -2,7 +2,7 @@
 
 ## Overview
 
-This monorepo contains the portfolio of Jack Siman, hosted [here](https://not-live-yet.com).
+This monorepo contains the portfolio of Jack Siman, hosted [here](https://www.jacksiman.com).
 
 In it you will find my main personal website as well as some other coding examples. All code was written by myself with aid of standard CLI schematics.
 
