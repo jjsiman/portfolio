@@ -2,12 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { EmailService } from '../../shared/services/email.service';
 import { SubSink } from 'subsink';
-
+import { fadeUpInAnimation } from '../../shared/animations/fadeUpIn';
 
 @Component({
   selector: 'portfolio-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  styleUrls: ['./contact.component.scss'],
+  animations: [fadeUpInAnimation]
 })
 export class ContactComponent implements OnInit {
   
