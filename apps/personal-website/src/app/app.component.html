@@ -2,9 +2,7 @@
   <button mat-icon-button (click)="sidenav.toggle()">
     <mat-icon>{{ sidenav.opened ? 'close' : 'menu' }}</mat-icon>
   </button>
-  <span>
-    <portfolio-logo></portfolio-logo>
-  </span>
+  <portfolio-logo></portfolio-logo>
 </mat-toolbar>
 
 <mat-sidenav-container class="app-container" [ngStyle]="{ 'margin-top': isMobile ? 64 : 0 }">
@@ -13,6 +11,7 @@
     <portfolio-navigation [collapsible]="isMobile" (closed)="sidenav.close()"></portfolio-navigation>
   </mat-sidenav>
   <mat-sidenav-content role="main">
+    <portfolio-construction></portfolio-construction>
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

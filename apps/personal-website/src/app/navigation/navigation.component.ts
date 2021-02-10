@@ -24,7 +24,7 @@ export class NavigationComponent implements OnInit {
     },
     {
       route: '/projects',
-      icon: 'work',
+      icon: 'inventory_2',
       label: 'Projects'
     },
     {

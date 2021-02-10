@@ -9,12 +9,21 @@
 @import "../../../node_modules/bootstrap/scss/grid";
 @import "../../../node_modules/bootstrap/scss/utilities";
 
-@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined";
+
+.material-icons-outlined {
+  font-family: 'Material Icons Outlined';
+}
 
 a:hover {
   color: map-get($personal-website-primary, 400);
 }
 
-html, body { height: 100%; }
+html,
+body {
+  height: 100%;
+}
 
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  margin: 0;
+}
