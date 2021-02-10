@@ -16,6 +16,7 @@ import { LogoComponent } from './logo/logo.component';
 import { FullScreenWrapperComponent } from './shared/components/full-screen-wrapper/full-screen-wrapper.component';
 import { FocusTrapComponent } from './shared/components/focus-trap/focus-trap.component';
 import { ConstructionComponent } from './shared/components/construction/construction.component';
+import { AboutComponent } from './pages/about/about.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ConstructionComponent } from './shared/components/construction/construc
     LogoComponent,
     FullScreenWrapperComponent,
     FocusTrapComponent,
-    ConstructionComponent
+    ConstructionComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
