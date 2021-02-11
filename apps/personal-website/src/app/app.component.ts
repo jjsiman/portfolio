@@ -1,5 +1,5 @@
-import { Component, HostBinding, OnInit, ViewChild } from '@angular/core';
-import { BreakpointObserver } from '@angular/cdk/layout';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { SubSink } from 'subsink';
 import { MatSidenav } from '@angular/material/sidenav';
 import { NavigationEnd, Router } from '@angular/router';
@@ -13,11 +13,11 @@ import { filter } from 'rxjs/operators';
 export class AppComponent implements OnInit {
 
   isMobile = false;
+  isXSmallMobile = false;
+
   private subsink = new SubSink();
 
   @ViewChild('sidenav', { read: MatSidenav }) sidenav: MatSidenav;
-
-  @HostBinding('class') class = 'mat-typography';
 
   constructor(
     private router: Router,
@@ -28,9 +28,11 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     // detect mobile breakpoint
     this.subsink.sink = this.breakpointObserver.observe([
-      '(max-width: 740px)',
+      Breakpoints.XSmall,
+      Breakpoints.Small,
     ]).subscribe(res => {
       this.isMobile = res.matches;
+      this.isXSmallMobile = res.breakpoints[Breakpoints.XSmall];
     });
 
     // when the user navigates on mobile, close the sidenav

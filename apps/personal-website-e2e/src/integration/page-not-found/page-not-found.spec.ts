@@ -1,7 +1,7 @@
 import { getPageTitle } from "../../support/app.po";
 
 describe('personal-website', () => {
-  beforeEach(() => cy.visit('/abc123'));
+  beforeEach(() => cy.visit('#/abc123'));
 
   it('should display a 404 page', () => {
     cy.url().should('include', '/not-found');

@@ -2,16 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { EmailService } from '../../shared/services/email.service';
 import { SubSink } from 'subsink';
-import { fadeUpInAnimation } from '../../shared/animations/fadeUpIn';
 
 @Component({
   selector: 'portfolio-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss'],
-  animations: [fadeUpInAnimation]
+  styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-  
+
   formGroup = this.fb.group({
     'name': this.fb.control(''),
     'email': this.fb.control('', [Validators.required, Validators.email]),
@@ -46,7 +44,7 @@ export class ContactComponent implements OnInit {
       );
     }
   }
-
+  
   /**
    * Handle the post request response with either
    * a success or a failure message.
