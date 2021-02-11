@@ -1,0 +1,23 @@
+@import '~@angular/material/theming';
+
+@mixin mobile-view {
+  @media ($mat-small) {
+    @content;
+  }
+}
+
+@mixin mobile-view--xsmall {
+  @media ($mat-xsmall) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @include mobile-view() {
+    @content;
+  }
+
+  @include mobile-view--xsmall() {
+    @content;
+  }
+}

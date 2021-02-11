@@ -1,8 +1,14 @@
+@import 'mixins';
+
 .app-container {
   height: 100%;
 
-  @media only screen and (max-width: 740px) {
+  @include mobile-view {
     height: calc(100% - 64px);
+  }
+
+  @include mobile-view--xsmall {
+    height: calc(100% - 56px);
   }
 }
 

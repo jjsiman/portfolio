@@ -27,18 +27,18 @@ export class NavigationComponent implements OnInit {
       icon: 'inventory_2',
       label: 'Projects'
     },
-    {
-      route: '/contact',
-      icon: 'email',
-      label: 'Contact me'
-    },
+    // {
+    //   route: '/contact',
+    //   icon: 'email',
+    //   label: 'Contact me'
+    // },
   ]
 
   constructor(
     matIconRegistry: MatIconRegistry,
     sanitizer: DomSanitizer
   ) {
-    matIconRegistry.addSvgIcon('github', sanitizer.bypassSecurityTrustResourceUrl('assets/images/github.svg'));
+    matIconRegistry.addSvgIcon('linkedin', sanitizer.bypassSecurityTrustResourceUrl('assets/images/linkedin.svg'));
   }
 
   ngOnInit(): void {

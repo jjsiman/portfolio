@@ -1,0 +1,17 @@
+@import 'mixins';
+
+.card-content {
+  padding: 3rem;
+}
+
+@include mobile-view {
+  .card-content {
+    padding: 2rem;
+  }
+}
+
+@include mobile-view--xsmall {
+  .card-content {
+    padding: 1rem;
+  }
+}

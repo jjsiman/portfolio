@@ -17,6 +17,7 @@ import { FullScreenWrapperComponent } from './shared/components/full-screen-wrap
 import { FocusTrapComponent } from './shared/components/focus-trap/focus-trap.component';
 import { ConstructionComponent } from './shared/components/construction/construction.component';
 import { AboutComponent } from './pages/about/about.component';
+import { TextCardComponent } from './shared/components/text-card/text-card.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { AboutComponent } from './pages/about/about.component';
     FullScreenWrapperComponent,
     FocusTrapComponent,
     ConstructionComponent,
-    AboutComponent
+    AboutComponent,
+    TextCardComponent
   ],
   imports: [
     BrowserModule,

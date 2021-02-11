@@ -21,6 +21,11 @@
               "apps/personal-website/src/assets"
             ],
             "styles": ["apps/personal-website/src/styles.scss"],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "apps/personal-website/src/styles"
+              ]
+            },
             "scripts": []
           },
           "configurations": {

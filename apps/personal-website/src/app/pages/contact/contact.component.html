@@ -2,7 +2,7 @@
 <portfolio-full-screen-wrapper>
   <form [formGroup]="formGroup" (ngSubmit)="sendEmail()" class="container-fluid">
     <div class="row justify-content-center">
-      <div [@fadeUpIn] class="col-auto mat-card p-5">
+      <portfolio-text-card class="col-auto">
         <div class="row">
           <div class="col">
             <h1>Contact Me</h1>
@@ -36,7 +36,8 @@
                 <p *ngIf="submitSuccess" class="submit-message submit-message--success">Email sent successfully!</p>
                 <p *ngIf="!submitSuccess" class="submit-message submit-message--failure">Unable to send email. Please
                   try
-                  again or <a href="https://github.com/jjsiman/portfolio/issues/new" target="_blank">submit an issue</a>
+                  again or <a href="https://github.com/jjsiman/portfolio/issues/new" target="_blank">submit an
+                    issue</a>
                   on
                   Github.
                 </p>
@@ -48,7 +49,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </portfolio-text-card>
     </div>
   </form>
 </portfolio-full-screen-wrapper>

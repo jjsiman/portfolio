@@ -14,10 +14,10 @@ const routes: Routes = [
     path: 'about',
     component: AboutComponent
   },
-  {
-    path: 'contact',
-    component: ContactComponent
-  },
+  // {
+  //   path: 'contact',
+  //   component: ContactComponent
+  // },
   {
     path: 'not-found',
     component: PageNotFoundComponent
@@ -34,7 +34,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { 
+  imports: [RouterModule.forRoot(routes, {
+    
     useHash: true,
     relativeLinkResolution: 'legacy' })],
   exports: [RouterModule]

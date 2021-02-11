@@ -1,8 +1,19 @@
+@import 'mixins';
+
 .wrapper {
   align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
-@media only screen and (max-width: 740px) {
+// Fixes overflow bug with display flex
+@media only screen and (max-height: 400px) {
+  .wrapper {
+    display: block;
+  }
+}
+
+@include mobile {
   .wrapper {
     align-items: flex-start;
   }

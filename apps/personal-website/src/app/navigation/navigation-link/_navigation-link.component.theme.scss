@@ -4,7 +4,6 @@
   $background: map-get($config, background);
   
   .active {
-    color: mat-color($primary);
     background-color: map-get($background, hover);
   }
 }
