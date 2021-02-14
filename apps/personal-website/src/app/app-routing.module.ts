@@ -4,6 +4,7 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 import { ContactComponent } from './pages/contact/contact.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
+import { ProjectsComponent } from './pages/projects/projects.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,10 @@ const routes: Routes = [
   {
     path: 'about',
     component: AboutComponent
+  },
+  {
+    path: 'projects',
+    component: ProjectsComponent
   },
   // {
   //   path: 'contact',

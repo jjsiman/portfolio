@@ -10,7 +10,8 @@
 
 $custom-typography: mat-typography-config(
   $font-family: 'Work Sans, sans-serif',
-  $headline: mat-typography-level(24px, 32px, 400, 'Vesper Libre, serif')
+  $headline: mat-typography-level(24px, 32px, 400, 'Vesper Libre, serif'),
+  $title: mat-typography-level(18px, 22px, 400)
 );
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -22,7 +23,7 @@ $custom-typography: mat-typography-config(
 // modifying values as needed
 $personal-site-dark-theme-background: map-merge($mat-dark-theme-background, (
   background: #121212,
-  card: rgba(255, 255, 255, 0.07)
+  card: #121212
 ));
 
 // Override default material dark color config

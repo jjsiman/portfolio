@@ -18,6 +18,7 @@ import { FocusTrapComponent } from './shared/components/focus-trap/focus-trap.co
 import { ConstructionComponent } from './shared/components/construction/construction.component';
 import { AboutComponent } from './pages/about/about.component';
 import { TextCardComponent } from './shared/components/text-card/text-card.component';
+import { ProjectsComponent } from './pages/projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { TextCardComponent } from './shared/components/text-card/text-card.compo
     FocusTrapComponent,
     ConstructionComponent,
     AboutComponent,
-    TextCardComponent
+    TextCardComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
