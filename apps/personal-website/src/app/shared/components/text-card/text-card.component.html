@@ -1,5 +1,31 @@
-<div [@fadeUpIn] class="mat-card mat-elevation-z0">
-  <div class="card-content">
+<div [@fadeUpIn] class="mat-card mat-elevation-z0" *ngIf="page; else noPage">
+  <div class="card-contents">
+    <!-- title -->
+    <h1>{{ page.title }}</h1>
+
+    <!-- bluf -->
+    <ng-container *ngIf="page.bluf">
+      <p *ngFor="let blufParagraph of page.bluf">{{ blufParagraph }}</p>
+    </ng-container>
+
+    <!-- content -->
+    <ng-container *ngIf="page.content" [ngSwitch]="page.contentType">
+      <ul *ngSwitchCase="'list'" class="content-list">
+        <li class="content-list__item" *ngFor="let contentListItem of page.content">{{ contentListItem }}</li>
+      </ul>
+      <!-- default is paragraph -->
+      <ng-container *ngSwitchDefault>
+        <p class="content-paragraph" *ngFor="let contentParagraph of page.content">{{ contentParagraph }}</p>
+      </ng-container>
+    </ng-container>
+
+    <!-- anything else passed along -->
     <ng-content></ng-content>
   </div>
 </div>
+
+<ng-template #noPage>
+  <div [@fadeUpIn] class="mat-card mat-elevation-z0">
+    <ng-content></ng-content>
+  </div>
+</ng-template>

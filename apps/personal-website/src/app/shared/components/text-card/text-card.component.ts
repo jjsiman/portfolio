@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { fadeUpInAnimation } from '../../animations/fadeUpIn';
+import { Page } from '../../models/page.model';
 
 @Component({
   selector: 'portfolio-text-card',
@@ -8,6 +9,8 @@ import { fadeUpInAnimation } from '../../animations/fadeUpIn';
   animations: [fadeUpInAnimation]
 })
 export class TextCardComponent implements OnInit {
+
+  @Input() page: Page;
 
   constructor() { }
 

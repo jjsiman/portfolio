@@ -10,15 +10,13 @@ import { MaterialModule } from './shared/modules/material/material.module';
 import { ContactComponent } from './pages/contact/contact.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavigationComponent } from './navigation/navigation.component';
-import { HomeComponent } from './pages/home/home.component';
 import { NavigationLinkComponent } from './navigation/navigation-link/navigation-link.component';
 import { LogoComponent } from './logo/logo.component';
 import { FullScreenWrapperComponent } from './shared/components/full-screen-wrapper/full-screen-wrapper.component';
 import { FocusTrapComponent } from './shared/components/focus-trap/focus-trap.component';
 import { ConstructionComponent } from './shared/components/construction/construction.component';
-import { AboutComponent } from './pages/about/about.component';
 import { TextCardComponent } from './shared/components/text-card/text-card.component';
-import { ProjectsComponent } from './pages/projects/projects.component';
+import { DefaultPageComponent } from './pages/default-page/default-page.component';
 
 @NgModule({
   declarations: [
@@ -26,15 +24,13 @@ import { ProjectsComponent } from './pages/projects/projects.component';
     PageNotFoundComponent,
     ContactComponent,
     NavigationComponent,
-    HomeComponent,
     NavigationLinkComponent,
     LogoComponent,
     FullScreenWrapperComponent,
     FocusTrapComponent,
     ConstructionComponent,
-    AboutComponent,
     TextCardComponent,
-    ProjectsComponent
+    DefaultPageComponent
   ],
   imports: [
     BrowserModule,

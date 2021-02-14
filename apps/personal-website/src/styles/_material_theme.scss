@@ -23,6 +23,7 @@ $custom-typography: mat-typography-config(
 // modifying values as needed
 $personal-site-dark-theme-background: map-merge($mat-dark-theme-background, (
   background: #121212,
+  app-bar: #121212,
   card: #121212
 ));
 
