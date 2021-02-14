@@ -1,18 +1,30 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
-import { ContactComponent } from './pages/contact/contact.component';
-import { HomeComponent } from './pages/home/home.component';
-import { AboutComponent } from './pages/about/about.component';
+import { DefaultPageComponent } from './pages/default-page/default-page.component';
+import { PageContentResolverService } from './shared/services/page-content-resolver.service';
 
 const routes: Routes = [
   {
     path: 'home',
-    component: HomeComponent
+    component: DefaultPageComponent,
+    resolve: {
+      page: PageContentResolverService
+    }
   },
   {
     path: 'about',
-    component: AboutComponent
+    component: DefaultPageComponent,
+    resolve: {
+      page: PageContentResolverService
+    }
+  },
+  {
+    path: 'projects',
+    component: DefaultPageComponent,
+    resolve: {
+      page: PageContentResolverService
+    }
   },
   // {
   //   path: 'contact',
@@ -21,7 +33,7 @@ const routes: Routes = [
   {
     path: 'not-found',
     component: PageNotFoundComponent
-  }, 
+  },
   {
     path: '',
     redirectTo: '/home',
@@ -35,9 +47,9 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
-    
     useHash: true,
-    relativeLinkResolution: 'legacy' })],
+    relativeLinkResolution: 'legacy'
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

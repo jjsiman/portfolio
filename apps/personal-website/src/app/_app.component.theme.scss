@@ -3,8 +3,8 @@
   $foreground: map-get($config, foreground);
   $background: map-get($config, background);
   
-  .mobile-toolbar {
-    border-bottom: 1px solid map-get($foreground, divider);
+  .mat-toolbar {
+    border-bottom: 1px solid mat-color($foreground, divider);
   }
 
   .mat-sidenav {

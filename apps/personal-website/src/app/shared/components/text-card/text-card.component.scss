@@ -1,17 +1,25 @@
 @import 'mixins';
 
-.card-content {
+.content-list {
+  list-style-type: square;
+
+  & > li {
+    padding-bottom: 0.5rem;
+  }
+}
+
+.card-contents {
   padding: 3rem;
 }
 
 @include mobile-view {
-  .card-content {
+  .card-contents {
     padding: 2rem;
   }
 }
 
 @include mobile-view--xsmall {
-  .card-content {
+  .card-contents {
     padding: 1rem;
   }
 }
