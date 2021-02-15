@@ -18,7 +18,8 @@
             "aot": true,
             "assets": [
               "apps/personal-website/src/favicon.ico",
-              "apps/personal-website/src/assets"
+              "apps/personal-website/src/assets",
+              "apps/personal-website/src/_redirects"
             ],
             "styles": ["apps/personal-website/src/styles.scss"],
             "stylePreprocessorOptions": {
